@@ -1,0 +1,127 @@
+body{
+	background-image: url("https://www.bellacor.com/media.bellacor.com/images/1500/238801RG35725.jpg");
+	height: 100%;
+	background-size: cover;
+	/* https://i.pinimg.com/564x/ff/c2/fd/ffc2fd0a39e64552011bdd3e4967e27a.jpg */
+	
+}
+
+h1 {
+	text-align: center;
+	display: block;
+	width: 1000px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	letter-spacing: 5px;
+	font-family: 'Pattaya', sans-serif;
+	font-size: xx-large;
+	font-weight: lighter;
+}
+
+.content {
+	display: flex;
+	max-width: 1100px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 100px auto;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.image{
+	position: relative;
+	margin: calc(10%/6);
+	transition: all 0.2s;
+	/* float: left; */
+	border-radius: 20px;
+}
+
+.image__img{
+	display: block; 
+	width: 300px; 
+	height: 300px;
+	margin: 0;
+	/* transition: all 0.2s; */
+	object-fit: cover;
+	border-radius: 20px;
+	border: 1.5px solid darkslateblue;
+}
+
+@media screen and (max-width: 1080px){
+	.image__img{
+		width: 200px;
+		height: 200px;
+	}
+	.content{
+		max-width: 700px;
+	}
+	.image__overlay:hover {
+		width: 203px;
+		height: 203px;
+	}
+	/* .image__overlay {
+		width: 203px;
+		height: 203px;
+	} */
+
+	.image__title {
+		font-size: 1em;
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 730px){
+	.image__img{
+		width: 150px;
+		height: 150px;
+	}
+	.content{
+		max-width: 600px;
+	}
+}
+
+
+
+.image:hover {
+	box-shadow: 0 0.5em 0.5em -0.4em;
+	transform: translateY(-0.25em);
+	
+}
+
+.image__overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 303px;
+	height: 303px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.2s;
+	border-radius: 20px;
+}
+
+/* Targets every direct child of the image overlay 
+	Basically targets the image__title*/
+.image__overlay > * {
+	transform: translateY(20px); /*Starts at under 20 and then moves to center once hovered*/
+	transition: transform 0.2s;
+}
+
+.image__overlay:hover {
+	opacity: .85;
+}
+
+.image__overlay:hover > * {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
