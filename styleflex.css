@@ -2,7 +2,6 @@ body{
 	background-image: url("https://www.bellacor.com/media.bellacor.com/images/1500/238801RG35725.jpg");
 	height: 100%;
 	background-size: cover;
-	/* https://i.pinimg.com/564x/ff/c2/fd/ffc2fd0a39e64552011bdd3e4967e27a.jpg */
 	
 }
 
@@ -26,14 +25,12 @@ h1 {
 	align-items: center;
 	margin: 100px auto;
 	padding: 20px;
-	border-radius: 20px;
 }
 
 .image{
 	position: relative;
 	margin: calc(10%/6);
 	transition: all 0.2s;
-	/* float: left; */
 	border-radius: 20px;
 }
 
@@ -42,7 +39,6 @@ h1 {
 	width: 300px; 
 	height: 300px;
 	margin: 0;
-	/* transition: all 0.2s; */
 	object-fit: cover;
 	border-radius: 20px;
 	border: 1.5px solid darkslateblue;
@@ -60,10 +56,6 @@ h1 {
 		width: 203px;
 		height: 203px;
 	}
-	/* .image__overlay {
-		width: 203px;
-		height: 203px;
-	} */
 
 	.image__title {
 		font-size: 1em;
